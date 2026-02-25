@@ -1,0 +1,13 @@
+Actualizar commit en git
+
+PS C:\Users\Marlon Damián\mi-portafolio> git add .
+PS C:\Users\Marlon Damián\mi-portafolio> git commit -m "feat: añadido datos personalizados"
+
+
+
+Para cambios en el repositorio de Git en el proyecto y errores de sincronización:
+cd "C:\Users\Marlon Damián\mi-portafolio"
+git remote remove origin
+git remote add origin https://github.com/Marlondamian26/mi-portafolio.git
+git branch -M main
+git push -u origin main --force
