@@ -26,7 +26,7 @@ const projects = [
         "Healthcare",
         "Responsive Design"
     ],
-    link: "https://github.com/Marlondamian26/Mis_proyectos/tree/Gestion-Saude"
+    link: "https://mis-proyectos-1-thyh.onrender.com"
 }
     // ... otros proyectos
 ];
