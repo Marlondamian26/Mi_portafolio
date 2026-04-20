@@ -26,7 +26,7 @@ const projects = [
         "Healthcare",
         "Responsive Design"
     ],
-    link: "https://mis-proyectos-1-thyh.onrender.com"
+    link: "https://gestion-saude.onrender.com"
 }
     // ... otros proyectos
 ];
