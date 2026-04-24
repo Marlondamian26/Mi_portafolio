@@ -12,7 +12,7 @@ const projects = [
     {
     id: 2,
     title: "🏥 Gestion-Saude - Sistema de Gestión Médica",
-    description: "Plataforma de gestión médica para clínica o consultorio y sitio web Consultorio Dra. Belkis Morejón Acosta, Luanda-Angola. Características principales: 🔐 Autenticación JWT con roles (Admin, Doctor, Enfermería y Paciente) • 📅 Sistema de citas con disponibilidad en tiempo real • 🔔 Notificaciones automáticas con polling • 👩‍⚕️ Panel específico para enfermería con registro de signos vitales • 📊 Panel de administración con CRUD completo • 🌓 Modo oscuro/claro con detección automática • 📱 Diseño responsive y accesible • 🛢️ Base de Datos PostgreSQL • Backend: Django REST Framework. Frontend: React con Context API y CSS variables.",
+    description: "Plataforma de gestión médica para clínica o consultorio y sitio web Consultorio Dra. Belkis Morejón Acosta, Luanda-Angola. Características principales: 🔐 Autenticación JWT con roles (Admin, Doctor, Enfermería y Paciente) • 📅 Sistema de citas con disponibilidad en tiempo real • 🔔 Notificaciones automáticas con polling • 👩‍⚕️ Panel específico para enfermería con registro de signos vitales • 💬 Chatbot integrado para gestión de citas • 📊 Panel de administración con CRUD completo • 🌓 Modo oscuro/claro con detección automática • 📱 Diseño responsive y accesible • 🛢️ Base de Datos PostgreSQL • Backend: Django REST Framework. Frontend: React con Context API y CSS variables.",
     image: "assets/images/proyecto-belkis-saude.jpg",
     tags: [
         "Django", 
