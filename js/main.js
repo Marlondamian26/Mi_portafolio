@@ -27,7 +27,7 @@ const projects = [
         tags: ["Django", "React", "PostgreSQL", "Django REST Framework", "JWT", "Context API", "Full Stack", "Healthcare"],
         deployed: true,
         liveUrl: "https://gestion-saude.onrender.com",
-        githubUrl: "https://github.com/Marlondamian26/Gestion-Saude",
+        githubUrl: "https://github.com/Marlondamian26/Mis_proyectos/tree/Gestion-Saude",
         viewProjectEs: "Ver proyecto",
         viewProjectEn: "View project",
         viewGithubEs: "Ver en GitHub",
@@ -139,25 +139,35 @@ function renderSkills() {
     if (placeholder) placeholder.remove();
 
     const skills = [
-        { name: "HTML", category: "frontend" },
-        { name: "CSS", category: "frontend" },
-        { name: "JavaScript", category: "frontend" },
-        { name: "React", category: "frontend" },
-        { name: "Node.js", category: "backend" },
-        { name: "NestJS", category: "backend" },
-        { name: "Django", category: "backend" },
-        { name: "Python", category: "backend" },
-        { name: "Java", category: "backend" },
-        { name: "PostgreSQL", category: "database" },
-        { name: "Docker", category: "devops" },
-        { name: "Git", category: "tools" },
-        { name: "VS Code", category: "tools" },
-        { name: "Responsive Design", category: "frontend" }
+        { name: "HTML", category: "Frontend" },
+        { name: "CSS", category: "Frontend" },
+        { name: "JavaScript", category: "Frontend" },
+        { name: "React", category: "Frontend" },
+        { name: "Responsive Design", category: "Frontend" },
+        { name: "Node.js", category: "Backend" },
+        { name: "NestJS", category: "Backend" },
+        { name: "Django", category: "Backend" },
+        { name: "Python", category: "Backend" },
+        { name: "Java", category: "Backend" },
+        { name: "PostgreSQL", category: "Database" },
+        { name: "Docker", category: "DevOps" },
+        { name: "Git", category: "Tools" },
+        { name: "VS Code", category: "Tools" }
     ];
 
-    container.innerHTML = skills.map(skill =>
-        `<span class="skill-tag" data-category="${skill.category}">${skill.name}</span>`
-    ).join('');
+    const grouped = {};
+    skills.forEach(skill => {
+        if (!grouped[skill.category]) grouped[skill.category] = [];
+        grouped[skill.category].push(skill.name);
+    });
+
+    let html = '';
+    for (const [category, items] of Object.entries(grouped)) {
+        html += `<div class="skills-group"><span class="skills-category">${category}</span>`;
+        html += items.map(name => `<span class="skill-tag" data-category="${category}">${name}</span>`).join('');
+        html += `</div>`;
+    }
+    container.innerHTML = html;
 }
 
 // ========== SISTEMA DE TEMAS ==========

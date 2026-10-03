@@ -659,9 +659,27 @@ ul {
 
 .skills-grid {
     display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.skills-group {
+    display: flex;
     flex-wrap: wrap;
     gap: 0.6rem;
-    width: 100%;
+    align-items: center;
+}
+
+.skills-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: var(--font-mono);
+    padding: 0.25rem 0.6rem;
+    opacity: 0.7;
 }
 
 .skill-tag {
@@ -683,7 +701,32 @@ ul {
     transform: translateY(-1px);
 }
 
-/* Imagen de perfil */
+/* Stats */
+.about-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    min-width: 90px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: var(--font-mono);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
 .profile-wrapper {
     position: relative;
     width: 320px;
@@ -824,6 +867,22 @@ footer {
 footer p {
     color: var(--text-secondary);
     opacity: 0.8;
+}
+
+.footer-credits {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.footer-link {
+    color: var(--text-secondary);
+    border-bottom: 1px dashed var(--border-color);
+    transition: var(--transition);
+}
+
+.footer-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 /* ========================== FOCUS ACCESSIBILITY ========================== */
