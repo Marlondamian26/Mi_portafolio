@@ -32,6 +32,7 @@
     --gradient-card-hover: linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%);
     --gradient-accent: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     --gradient-border: linear-gradient(135deg, #2563eb 0%, #0f766e 100%);
+    --gradient-divider: linear-gradient(90deg, transparent 0%, #e4e4e7 50%, transparent 100%);
     --gradient-mesh: radial-gradient(at 20% 20%, rgba(37,99,235,0.08) 0px, transparent 50%),
                      radial-gradient(at 80% 0%, rgba(15,118,110,0.06) 0px, transparent 50%),
                      radial-gradient(at 0% 80%, rgba(37,99,235,0.05) 0px, transparent 50%);
@@ -70,6 +71,7 @@
     --gradient-card-hover: linear-gradient(180deg, #1e1e22 0%, #14141a 100%);
     --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     --gradient-border: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
+    --gradient-divider: linear-gradient(90deg, transparent 0%, #27272a 50%, transparent 100%);
     --gradient-mesh: radial-gradient(at 20% 20%, rgba(59,130,246,0.10) 0px, transparent 50%),
                      radial-gradient(at 80% 0%, rgba(20,184,166,0.08) 0px, transparent 50%),
                      radial-gradient(at 0% 80%, rgba(59,130,246,0.06) 0px, transparent 50%);
@@ -327,7 +329,8 @@ ul {
 .hero {
     padding: clamp(4rem, 8vh, 7rem) 0;
     text-align: center;
-    background: var(--gradient-hero);
+    background: var(--gradient-mesh), var(--gradient-hero);
+    background-attachment: fixed, fixed;
     position: relative;
     overflow: hidden;
     min-height: 90vh;
@@ -454,14 +457,15 @@ ul {
 }
 
 .btn--ghost {
-    background: transparent;
+    background: var(--surface-1);
     color: var(--accent);
     border-color: var(--accent);
 }
 
 .btn--ghost:hover {
-    background: var(--accent-light);
+    background: var(--surface-2);
     transform: translateY(-1px);
+    box-shadow: var(--shadow-glow);
 }
 
 .btn--ghost:focus-visible {
@@ -480,16 +484,27 @@ ul {
     padding: clamp(4rem, 8vh, 7rem) 0;
 }
 
-.section h2 {
+.section-header {
     text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
+    margin-inline: auto;
+    max-width: 720px;
+    display: block;
     margin-bottom: 3rem;
-    position: relative;
-    display: inline-block;
 }
 
-.section h2::after {
+.section-title {
+    text-align: center;
+    margin-inline: auto;
+    max-width: 720px;
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+.section-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -497,7 +512,22 @@ ul {
     transform: translateX(-50%);
     width: 48px;
     height: 2px;
-    background: var(--accent);
+    background: var(--gradient-accent);
+}
+
+section > h2,
+section > .section-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-inline: auto;
+    max-width: 640px;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
 }
 
 .section h3 {
@@ -509,7 +539,8 @@ ul {
 
 /* ========================== PROYECTOS ========================== */
 .projects {
-    background: var(--gradient-hero);
+    background: var(--gradient-mesh), var(--gradient-hero);
+    background-attachment: fixed, fixed;
 }
 
 .projects-grid {
@@ -534,9 +565,9 @@ ul {
 
 .project-card:hover {
     background: var(--gradient-card-hover);
-    transform: translateY(-2px);
+    border-color: rgba(37, 99, 235, 0.35);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--accent);
 }
 
 /* Media: aspect-ratio 16:10 forzar uniforme */
@@ -673,7 +704,8 @@ ul {
 
 /* ========================== SOBRE MÍ ========================== */
 .about {
-    background: var(--gradient-hero);
+    background: var(--gradient-mesh), var(--gradient-hero);
+    background-attachment: fixed, fixed;
 }
 
 .about-content {
@@ -861,53 +893,35 @@ ul {
 
 /* ========================== CONTACTO ========================== */
 .contact {
-    background: var(--gradient-hero);
-}
-
-.contact h2 {
-    margin-bottom: 1rem;
-}
-
-.contact-subtitle {
-    text-align: center;
-    color: var(--text-secondary);
-    margin-bottom: 3rem;
-    font-size: 1.05rem;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
+    background: var(--gradient-mesh), var(--gradient-hero);
+    background-attachment: fixed, fixed;
 }
 
 .contact-links {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .contact-card {
     background: var(--gradient-card);
     border: 1px solid var(--surface-3);
     border-radius: var(--border-radius);
-    padding: 2rem;
+    padding: 1.25rem 1.5rem;
     text-decoration: none;
     color: var(--text-primary);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    min-width: 200px;
-    min-height: 170px;
-    transition: var(--transition);
+    gap: 1rem;
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease, background 200ms ease;
     box-shadow: var(--shadow-sm);
-    flex: 1;
-    max-width: 260px;
 }
 
 .contact-card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--accent);
+    border-color: rgba(37, 99, 235, 0.35);
     background: var(--gradient-card-hover);
 }
 
@@ -916,22 +930,39 @@ ul {
     outline-offset: var(--focus-offset);
 }
 
-.contact-card svg {
+.contact-card__icon {
     flex-shrink: 0;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    min-height: 22px;
+    display: inline-block;
     color: var(--accent);
+    fill: currentColor;
 }
 
-.contact-title {
-    font-size: 1.1rem;
+.dark-theme .contact-card__icon {
+    color: var(--accent-light);
+}
+
+.contact-card__text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.contact-card__label {
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-primary);
 }
 
-.contact-desc {
+.contact-card__value {
     font-size: 0.875rem;
     color: var(--text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* ========================== FOOTER ========================== */
@@ -953,18 +984,27 @@ footer p {
     font-size: 0.85rem;
 }
 
-.footer-link {
-    color: var(--text-secondary);
-    border-bottom: 1px dashed var(--border-color);
-    transition: var(--transition);
-}
+    .footer-link {
+        color: var(--text-secondary);
+        border-bottom: 1px dashed var(--border-color);
+        transition: var(--transition);
+    }
 
-.footer-link:hover {
-    color: var(--accent);
-    border-color: var(--accent);
-}
+    .footer-link:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+    }
 
-/* ========================== FOCUS ACCESSIBILITY ========================== */
+    /* ========================== SECTION DIVIDER ========================== */
+    .section-divider {
+        height: 1px;
+        width: 100%;
+        background: var(--gradient-divider);
+        border: none;
+        margin: 0;
+    }
+
+    /* ========================== FOCUS ACCESSIBILITY ========================== */
 *:focus-visible {
     outline: var(--focus-ring);
     outline-offset: var(--focus-offset);
@@ -1050,7 +1090,7 @@ footer p {
         padding: 5rem 0 3rem;
     }
 
-    .section h2::after {
+    .section-title::after {
         width: 36px;
     }
 
@@ -1105,7 +1145,7 @@ footer p {
         padding: 4rem 0;
     }
 
-    .section h2 {
+    .section-title {
         font-size: 1.75rem;
     }
 
@@ -1133,7 +1173,7 @@ footer p {
         font-size: 1rem;
     }
 
-    .section h2 {
+    .section-title {
         font-size: 1.5rem;
     }
 

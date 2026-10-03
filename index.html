@@ -72,7 +72,9 @@
 
         <section id="proyectos" class="projects section">
             <div class="container">
-                <h2 data-es="Mis Proyectos" data-en="My Projects">Mis Proyectos</h2>
+                <div class="section-header">
+                    <h2 class="section-title" data-es="Mis Proyectos" data-en="My Projects">Mis Proyectos</h2>
+                </div>
                 <div class="projects-grid" id="projects-grid" role="list">
                     <div class="projects-placeholder" data-es="Cargando proyectos..." data-en="Loading projects...">Cargando proyectos...</div>
                 </div>
@@ -81,8 +83,9 @@
 
         <section id="sobre-mi" class="about section">
             <div class="container">
-                <h2 data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
-
+                <div class="section-header">
+                    <h2 class="section-title" data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
+                </div>
                 <div class="about-content">
                     <div class="about-text">
                         <h3 data-es="Ingeniero Informático · Full Stack Developer" data-en="Computer Engineer · Full Stack Developer">Ingeniero Informático · Full Stack Developer</h3>
@@ -131,33 +134,41 @@
 
         <section id="contacto" class="contact section">
             <div class="container">
-                <h2 data-es="¿Hablamos?" data-en="Let's Talk?">¿Hablamos?</h2>
-                <p class="contact-subtitle" data-es="Estoy abierto a colaboraciones, oportunidades laborales o simplemente charlar sobre tecnología" data-en="I'm open to collaborations, job opportunities or just chatting about technology">Estoy abierto a colaboraciones, oportunidades laborales o simplemente charlar sobre tecnología</p>
+                <div class="section-header">
+                    <h2 class="section-title" data-es="¿Hablamos?" data-en="Let's Talk?">¿Hablamos?</h2>
+                    <p class="section-subtitle" data-es="Estoy abierto a colaboraciones, oportunidades laborales o simplemente charlar sobre tecnología" data-en="I'm open to collaborations, job opportunities or just chatting about technology">Estoy abierto a colaboraciones, oportunidades laborales o simplemente charlar sobre tecnología</p>
+                </div>
 
                 <div class="contact-links">
-                    <a href="https://github.com/Marlondamian26" target="_blank" class="contact-card" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <a href="https://github.com/Marlondamian26" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <svg class="contact-card__icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.07c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.14-.99 1.52-1.68 2.85-2.07-2.553-.295-5.227-1.28-5.227-5.68 0-1.243.44-2.268 1.14-3.068-.11-.295-.49-.49-.11-3.12 0 0 .93-.296 3.05 1.142.86-.24 1.77-.36 2.67-.36 0 .01 1.82.01 3.77 1.63.87-1.92 2.37-3.19 4.2-3.19.49 0 .96.04 1.4.12-1.07.97-1.88 2.23-1.88 3.62 0 2.65 1.34 4.86 3.2 6.21.83-.07 1.6-.1 2.4-.1 0 .92.02 1.86-.02 2.82-1.85-.43-3.43-1.38-4.6-2.55-.02 2.84.62 5.59 1.91 7.37.92-.15 1.83-.22 2.75-.22.92 0 1.83.07 2.75.22 1.29-1.78 1.93-4.53 1.91-7.37.88-.16 1.93-.38 3.2-.13.07-.81.11-1.66.11-2.51 0-3.76-3.04-6.81-7.44-6.81z"/>
                         </svg>
-                        <span class="contact-title">GitHub</span>
-                        <span class="contact-desc">@Marlondamian26</span>
+                        <div class="contact-card__text">
+                            <span class="contact-card__label">GitHub</span>
+                            <span class="contact-card__value">@Marlondamian26</span>
+                        </div>
                     </a>
 
-                    <a href="mailto:monterreymorejonm@email.com" class="contact-card" rel="noopener">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <a href="mailto:monterreymorejonm@email.com" class="contact-card">
+                        <svg class="contact-card__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <rect x="3" y="5" width="18" height="14" rx="2"/>
                             <polyline points="3 7 12 12 21 7"/>
                         </svg>
-                        <span class="contact-title" data-es="Email" data-en="Email">Email</span>
-                        <span class="contact-desc">monterreymorejonm@email.com</span>
+                        <div class="contact-card__text">
+                            <span class="contact-card__label" data-es="Email" data-en="Email">Email</span>
+                            <span class="contact-card__value">monterreymorejonm@email.com</span>
+                        </div>
                     </a>
 
-                    <a href="https://wa.me/5356738295" target="_blank" class="contact-card" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M12.04 2.01C6.49 2.01 2.01 6.49 2.01 12.04 2.01 16.97 5.66 21.19 10.36 22.43c.76.18 1.03-.33 1.03-.73 0-.36-.01-1.28-.02-2.52-4.21.74-5.1-1.82-5.1-1.82-.69-1.75-1.68-2.21-1.68-2.21-1.38-.94.11-.92.11-.92 1.52.1 2.31 1.56 2.31 1.56 1.36 2.34 3.57 1.68 4.45 1.28.14-.99.52-1.68 1-2.07-3.59-.41-7.36-1.8-7.36-7.92 0-1.75.62-3.23 1.64-4.34-.17-.4-1.32-2.01.28-4.2 0 0 1.33-.43 4.35 1.63.74-.21 1.55-.32 2.37-.32.81 0 1.61.11 2.35.32 3.02-2.06 4.34-1.62 4.34-1.62 1.6 2.19 1.45 3.8.28 4.2. 1.01 2.51 3.39 1.63 4.42z"/>
+                    <a href="https://wa.me/5356738295" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <svg class="contact-card__icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.79-1.68-2.09-.17-.3-.02-.47.13-.62.13-.15.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.57-.06-1 .43-1 .99 0 .57.11 1.03.39 1.42.28.4 1.15 1.73 2.58 2.52.35.24.59.39.63.67.05.28-.05.57-.1.71-.06.15-.34.52-.54.64-.2.12-.54.4-.49.78.06.36 1.26 2.06 1.75 2.93.08.15 1 .25 1.15.15.14-.1 1.88-.91 2.56-2.06.17-.29.3-.65.18-1.02-.12-.37-.1-.48.05-.8.15-.32 1.35-2.12 1.87-3.42.12-.34.06-.45.04-.5.07-.02.9.03 1.9.1 1.4.1.97.47 1.86 1.1 2.47.63.64 1.39.98 2.19 1.35-.08.59-.24 1.14-.45 1.64-.2.46-.42.95-.78 1.3-.38.38-1.04.39-1.4.26-.38-.14-2.18-.99-3.31-2.44-.29-.3-1.35-1.52-1.4-1.82-.03-.21 0-.4.09-.56.1.16.22.35.36.35.14 0 .3-.07.61 0 .3.08.22.16.3.25.04.09-0.02.17-.05.26-.03.09-1.04.74-1.42 1.2-1.28.37-.69 1.18-.56 2.72 0 .05.03.1.06.15.25.03.6.06 1.36-.02 2.31.09.95-.03 1.89-.2 2.79-.17.89-.49 1.79-.91 2.57.64.19 1.31.34 1.98.44-1.18.87-2.39 1.28-3.64 1.28-2.02 0-3.9-1.12-4.73-2.82.92-.68 1.76-1.55 2.42-2.56.6-.9 1.12-1.87 1.54-2.87.17-.39.47-.71.91-.6 1.15.34 2.19.99 3.08 1.9.9.92 1.63 2.06 2.14 3.26.08.24.15.48.22.73.3.47.17.96-.12 1.21-.29.24-1.88 1.12-3.41 1.71z"/>
                         </svg>
-                        <span class="contact-title" data-es="Teléfono y WhatsApp" data-en="Phone and WhatsApp">Teléfono y WhatsApp</span>
-                        <span class="contact-desc">+53 56738295</span>
+                        <div class="contact-card__text">
+                            <span class="contact-card__label" data-es="Teléfono y WhatsApp" data-en="Phone and WhatsApp">Teléfono y WhatsApp</span>
+                            <span class="contact-card__value">+53 56738295</span>
+                        </div>
                     </a>
                 </div>
             </div>
