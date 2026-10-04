@@ -358,13 +358,13 @@ ul {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.65rem 1.25rem;
     border-radius: var(--border-radius-tag);
     background: var(--accent-light);
     color: var(--accent);
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .badge-dot {
@@ -383,10 +383,10 @@ ul {
 }
 
 .hero h1 {
-    font-size: 2.75rem;
+    font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.15;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 .highlight {
@@ -406,16 +406,16 @@ ul {
 }
 
 .hero .subtitle {
-    font-size: 1.125rem;
+    font-size: 1.35rem;
     color: var(--text-secondary);
     margin-bottom: 0.5rem;
     font-weight: 400;
 }
 
 .hero .subtitle-2 {
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     opacity: 0.8;
 }
 
@@ -816,8 +816,8 @@ section > .section-title {
 /* Imagen de perfil */
 .profile-wrapper {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 380px;
+    height: 380px;
     margin: 0 auto;
 }
 
@@ -932,10 +932,10 @@ section > .section-title {
 
 .contact-card__icon {
     flex-shrink: 0;
-    width: 22px;
-    height: 22px;
-    min-width: 22px;
-    min-height: 22px;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
     display: inline-block;
     color: var(--accent);
     fill: currentColor;
@@ -1027,7 +1027,7 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
     }
 
     .about-content {
@@ -1037,8 +1037,8 @@ footer p {
 
     .profile-wrapper {
         margin: 0 auto;
-        width: 280px;
-        height: 280px;
+        width: 320px;
+        height: 320px;
     }
 
     .cta-buttons {
@@ -1083,7 +1083,7 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     .hero {
@@ -1105,7 +1105,7 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 1.75rem;
+        font-size: 1.85rem;
     }
 
     .nav-menu {
@@ -1166,11 +1166,11 @@ footer p {
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 
     .hero .subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .section-title {
@@ -1197,7 +1197,7 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .section {
