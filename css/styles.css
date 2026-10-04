@@ -167,39 +167,28 @@ ul {
 }
 
 .logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.25rem;
-    font-weight: 700;
+    gap: 0;
+    font-size: 1.6rem;
     color: var(--text-primary);
+    text-decoration: none;
+    cursor: default;
 }
 
-.logo-text {
-    position: relative;
+.logo-emoji {
+    display: inline-block;
+    line-height: 1;
+    filter: grayscale(0);
+    transition: none;
 }
 
-.logo-text::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent);
-    transition: width 0.3s ease;
-}
-
-.logo:hover .logo-text::after {
-    width: 100%;
-}
-
-.logo-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 8px var(--accent);
+.logo:hover,
+.logo:focus-visible {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
 }
 
 .nav-menu {
