@@ -39,7 +39,7 @@ const projects = [
         titleEn: "Mi-Pyme - Business Self-Management Platform",
         description: "Plataforma web full-stack para autogestión de pymes con roles ADMIN, NEGOCIO y CLIENTE. Gestión de negocios, productos, servicios, inventario, pedidos, reservas, facturación con IVA cubano (10%), y pagos múltiples (efectivo, transferencia, pago móvil). Arquitectura de servicios framework-agnostic preparada para migración a microservicios Nest.js. Auth con NextAuth, base de datos PostgreSQL con Prisma, testing con Vitest/Playwright/Storybook.",
         descriptionEn: "Full-stack web platform for SME self-management with ADMIN, BUSINESS and CLIENT roles. Manages businesses, products, services, inventory, orders, reservations, Cuban VAT invoicing (10%) and multi-method payments (cash, transfer, mobile). Architecture uses framework-agnostic services designed for migration to Nest.js microservices. Auth with NextAuth, PostgreSQL database with Prisma, testing with Vitest/Playwright/Storybook.",
-        image: "",
+        image: "assets/images/Mi-Pyme_Proyecto.jpg",
         placeholder: "MP",
         tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "NextAuth.js", "Node.js", "Software Empresarial", "SaaS", "Facturación", "Testing"],
         deployed: true,
