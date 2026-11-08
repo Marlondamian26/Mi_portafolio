@@ -620,11 +620,6 @@ section > .section-title {
     line-height: 1.6;
     color: var(--text-secondary);
     margin: 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    min-height: calc(1.6em * 3);
 }
 
 /* Tags: fila compacta, wrap, no dominan */
