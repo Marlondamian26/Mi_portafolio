@@ -667,6 +667,17 @@ section > .section-title {
     flex-shrink: 0;
 }
 
+.btn--primary .icon-external .project-icon,
+.btn--ghost .icon-github .project-icon,
+.badge-private .icon-lock .project-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: inherit;
+    fill: currentColor;
+    stroke: currentColor;
+}
+
 .badge-private {
     background: var(--surface-2);
     border: 1px dashed var(--surface-3);
